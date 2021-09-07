@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator prior</title>
+</head>
+<body>
+    <script>
+        var a= 10;
+        var b=20;
+        var m= 30;
+        var n= 40;
+        var result;
+
+        result = a > b || b >= m|| m>n; //하나만 true여도 true 리턴 false||false||false
+        document.write(result+"<br>");
+
+        result = a > b || b >= m|| m<=n; //하나만 true여도 true 리턴 false||false||true
+        document.write(result+"<br>");
+
+        result = a > b && b >= m && m<=n; //모두 true여야 true 리턴 true && true && true
+        document.write(result+"<br>");
+
+        result = a > b && b < m && m<=n; //모두 true여야 true 리턴 true && true && true
+        document.write(result+"<br>");
+
+        result =!(a>b) // true 면 false , false면 true 리턴 !(false)
+        document.write(result,"<br>");
+    </script>
+</body>
+</html>

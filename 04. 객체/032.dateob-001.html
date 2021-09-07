@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dateob</title>
+</head>
+<body>
+    <script>
+        // 현재 날짜와 현재 시간을 가지는 날짜 객체 생성
+        var today= new Date();
+        //월 
+        var nowMonth= today.getMonth();
+        //일
+        var nowDate= today.getDate();
+        //요일 0: 일요일~6 토요일
+        var nowDay= today.getDay();
+        //시간
+        var nowHour = today.getHours();
+        //분
+        var nowMinute = today.getMinutes();
+        //초
+        var nowSecond = tody.getSeconds();
+
+        document.write("<h1> 현재 날짜 시간 정보</h1>");
+        document.write("현재 월:" +nowMonth,"<br>");
+        document.write("현재 일:" +nowDate,"<br>");
+        document.write("현재 요일:" +nowDay,"<br>");
+        document.write("현재 시간:" +nowHour,"<br>");
+        document.write("현재 분:" +nowMinute,"<br>");
+        document.write("현재 초:" +nowSecond,"<br>");
+
+        //입력한 날짜로 된 날짜 객체 생성, 시간 미 입력 시 시간은 00:00:00 으로 초기화
+        // var worldcup=new Date(2002,4,31);
+        //var world cup= new date ("2002-04-31");
+        var worldcup= new Date("2002-04-31 09:30:30")
+
+        var wMonth= worldcup.getMonth();
+        var wDate= worldcup.getDate();
+        var wDay= worldcup.getDay();
+        var wHour= worldcup.getHours();
+        var wMinute= worldcup.getMinutes();
+        var wSecond= worldcup.getSeconds();
+
+
+        
+        document.write("<h1> 현재 날짜 시간 정보</h1>");
+        document.write("wc 월:" +wMonth,"<br>");
+        document.write(" wc:" +wDate,"<br>");
+        document.write("wc 요일:" +wDay,"<br>");
+        document.write("wc 시간:" +wHour,"<br>");
+        document.write("wc 분:" +wMinute,"<br>");
+        document.write("wc 초:" +wSecond,"<br>");
+        </script>
+    
+</body>
+</html>
