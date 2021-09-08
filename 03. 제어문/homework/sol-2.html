@@ -15,17 +15,18 @@
 <body>
 	<h2>3의 배수 찾기</h2>
 	<script>
-		var n=1;
-		var count=0;
-		while(n<=100) { 
-			n++;
-			if(n%3==0){
-			document.write(n,"<br>");
-			 count++;
+		var cnt = 0;
+		var i = 1;
+
+		while(i <= 100) {
+			if(i % 3 == 0) {
+				document.write(i + ", ");
+				cnt++;
 			}
+			i++;
 		}
-		document.write("3의배수는 총"+count+"개");
+		document.write("<br>");
+		document.write("<p>3의 배수의 개수는 : " + cnt + "</p>");
 	</script>
-	
 </body>
 </html>
