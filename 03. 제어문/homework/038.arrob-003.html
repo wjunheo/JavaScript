@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베열객체</title>
+</head>
+<body>
+    <script>
+        var greenArr=["교대","방배","강남"];
+        var yellowArr=["미금","정자","수서"];
+        //index 2부터 데이터 1개 삭제
+        //삭제된 구간에 서초 역삼 삽입
+        greenArr.splice(0,1,"서초","역삼");
+        console.log("===splice===");
+        conseole.log(greenArr);
+        //배열의 마지막 인덱스에 데잍 꺼내고 삭제
+        console.log("yrellowArr.length==="+yellowArr.length);
+        var data1=yellowArr.pop();
+        conseole.log("===pop===");
+        console.log(data1);
+        console.log(yellowArr.length);
+    </script>
+    
+</body>
+</html>
