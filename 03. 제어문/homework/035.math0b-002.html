@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document가위바위보</title>
+</head>
+<body>
+    <script>
+        document.write("<h1> 가위바위보 맞추기</h>");
+
+            var game=prompt("가위 바위보 중 선택 ㄱ","가위");
+   switch(game) {
+       case"가위": 
+       gameNum=1;
+     break;
+     case"바위":
+     gameNum=2;
+     break;
+     case"보":
+     gameNum=3;
+     break;
+     default:
+         alert("잘못 입력함");
+         location.reload();
+       
+   }
+   //var com =Math.ceil(Math.random()*3);
+   var com= Math.floor(Math.random()*3) +1;
+   document.write("good");
+   if(gameNum== com) {
+       document.write("<img src=\"images/game_1.jpg\">");
+   } else{
+       document.write("wrong");
+   }
+   </script>
+    
+</body>
+</html>

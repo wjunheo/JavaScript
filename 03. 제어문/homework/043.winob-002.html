@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <!--clearInterval: 동작중인 setInterval 중지시킴-->
+    <button onclick="clearInterval(ato_1);"> 증가 정지</button>
+    <button onclick="clearInterval(ato_2);"> 감소 정지</button>
+
+    <script>
+
+        var addNum=0;
+        var subNum=1000;
+
+        var auto_1 = setInterval(function(){
+            addNum++;
+            console.log("addNum:"+addNum);
+        },3000);
+        //3초 후 부터 3초마다 function안에 작성한 소스코드 실행
+        var auto_2 = setInterval(function() {
+            subNum--;
+            sonsole.log("subNum:"+subNum);
+        },3000);
+    </script>
+    
+</body>
+</html>
