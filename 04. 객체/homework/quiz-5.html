@@ -17,10 +17,25 @@
 
 
          */
-
-
-
-    </script>
+        var count=0;
+        var sum=0;
+         var N;
+         
+         while(N!="end") {
+             N = prompt("값입력 ㄱ, 그만은 end"+"횟수"+count+"합"+sum);
+             if(N!="end"&&N!=""){ 
+                 count++;
+                 N=parseInt(N);// 스트링값을 인트로바꿔줘야
+                sum+=N;
+             } else if(N=="end"){
+                alert("입력이 종료됨");
+            }else{
+                alert("다시");
+                location.reload();
+            }
+        }
+        docuemt.write("현재 횟수"+count+"현재합"+sum);
+        </script>
 
 </head>
 <body>

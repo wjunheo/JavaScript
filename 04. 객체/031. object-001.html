@@ -26,6 +26,33 @@
         //사용자 정의 객체 생성
         //ES5까지는 아래 두 가지 방식으로 객체 선언 및 생성
         //ES6부터는 자바와 동일하게 class로 객체 선언하고 호출 따로 가능
+        // static class tv {
+        //     private String color = "white";
+        //     private int price = 300000;
+
+        //     public static info() {
+        //         System.out.println(tv.get);
+        //     }
+        // }
+
+        var tv;
+
+        tv = [];
+
+        //객체 속성 정의 및 값 할당
+        var color = "white";
+        var price = 300000;
+
+        tv[0] = color;
+        tv[1] = price;
+
+        //객체 메서드 정의
+        var info = function() {
+            //this 객체 : 현재 선택된 객체 -> tv.info 호출 시 this에 tv객체가 담김
+            document.write("tv 색상 : " + color, "<br>");
+            document.write("tv 색상 : " + price, "<br>");
+        }
+
         var tv = new Object();
 
         //객체 속성 정의 및 값 할당
