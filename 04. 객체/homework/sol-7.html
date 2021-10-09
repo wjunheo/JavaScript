@@ -11,14 +11,16 @@
         var lotto = [];
 
         for(var i = 0; i < 7; i++) {
-            //로또 번호생성하여 lotto배열에 입력, 1~45까지의 랜덤 숫자 6개 + 보너스 번호 1
-            var lotto = (Math.random()*44)+1;
-            //중복 처리
-            if(lotto==lotto[i]){
-                lotto =(Math.random()*44)+1;
-                
-            }  
-        } 
+            lotto.push(Math.floor(Math.random() * 45) + 1);
+
+            for(var j = 0; j < i; j++) {
+                if(lotto[i] == lotto[j]) {
+                    lotto.pop();
+                    i--;
+                }
+            }
+        }
+        console.log(lotto);
 
         var lottoNo = "";
         for(var k = 0; k < lotto.length; k++) {
@@ -34,14 +36,18 @@
         var userNo = [];
 
         for(var userCnt = 0; userCnt < 6; userCnt++) {
-            //사용자 번호 입력 받아서 userNo 배열에 입력
-
-            //입력 값이 1보다 작거나 45보다 크거나 '', null입력 시 배열에서 삭제하고 다시 입력
-            if() {
-                
+            var num = prompt("1~45까지의 숫자를 입력하세요.");
+            userNo.push(num);
+            if(num < 1 || num > 45 || num == '' || num == null) {
+                userNo.pop();
+                userCnt--;
             } else {
-                //사용자 입력 값 중복 처리
-
+                for(var h = 0; h < userCnt; h++) {
+                    if(userNo[userCnt] == userNo[h]) {
+                        userNo.pop();
+                        userCnt--;
+                    }
+                }
             }
         }
 
@@ -52,9 +58,13 @@
 
         for(var m = 0; m < lotto.length; m++) {
             for(var n = 0; n < userNo.length; n++) {
-                //lotto번호와 사용자 입력값 비교
-                //보너스번호가 일치하면 bonusFlag -> true로 변경
-
+                if(lotto[m] == userNo[n]) {
+                    if(m == 6) {
+                        bonusFlag = true;
+                    } else {
+                        correctCnt++;
+                    }
+                }
             }
         }
 
@@ -67,9 +77,9 @@
                 document.write("3등 당첨!", '<br>');
             }
         } else if(correctCnt == 4) {
-            document.write("3등 당첨!", '<br>');
-        } else if(correctCnt == 3) {
             document.write("4등 당첨!", '<br>');
+        } else if(correctCnt == 3) {
+            document.write("5등 당첨!", '<br>');
         } else {
             document.write("꽝!", '<br>');
         }
